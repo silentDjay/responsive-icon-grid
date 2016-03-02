@@ -1,0 +1,117 @@
+body {
+  width: 88%;
+  margin: 6%;
+  color: #47a3da;
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  font-size: 2em; }
+
+.iconDiv {
+  width: calc(99% / 3);
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding: 2em 0 2em 0; }
+
+.topLeft {
+  border-bottom: solid 1px #ddd; }
+
+.topMid {
+  border-left: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  border-right: solid 1px #ddd; }
+
+.topRight {
+  border-bottom: solid 1px #ddd; }
+
+.bottomMid {
+  border-right: solid 1px #ddd;
+  border-left: solid 1px #ddd; }
+
+.iconDiv:hover {
+  background-color: #47a3da;
+  color: white; }
+
+.iconDiv:hover .line {
+  border-color: white; }
+
+i {
+  margin-bottom: .2em; }
+
+.line {
+  border-top: solid 6px #47a3da;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: .8em; }
+
+.english {
+  font-size: 1.2em;
+  font-weight: 500; }
+
+.deutsch {
+  text-transform: uppercase;
+  font-size: .6em;
+  display: none; }
+
+/*Media queries*/
+@media screen and (max-width: 1004px) and (min-width: 666px) {
+  .iconDiv {
+    width: calc(99% / 2); }
+
+  .topMid {
+    border-left: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    border-right: none; }
+
+  .topRight {
+    border-top: none;
+    border-right: solid 1px #ddd;
+    border-left: none; }
+
+  .bottomLeft {
+    border-top: none;
+    border-right: none;
+    border-bottom: solid 1px #ddd; }
+
+  .bottomMid {
+    border-top: none;
+    border-right: solid 1px #ddd;
+    border-left: none; } }
+@media screen and (max-width: 665px) {
+  .iconDiv {
+    width: 100%; }
+
+  .topLeft {
+    border-bottom: solid 1px #ddd;
+    border-right: none;
+    border-left: none; }
+
+  .topRight {
+    border-bottom: solid 1px #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+
+  .topMid {
+    border-bottom: solid 1px #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+
+  .bottomMid {
+    border-bottom: solid 1px #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+
+  .bottomLeft {
+    border-bottom: solid 1px #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+
+  .bottomRight {
+    border-top: none;
+    border-right: none;
+    border-left: none; } }
+
+/*# sourceMappingURL=styles.css.map */

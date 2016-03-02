@@ -1,0 +1,187 @@
+$threeWidth: calc(99% / 3);
+$twoWidth: calc(99% / 2);
+$oneWidth: 100%;
+$mainColor: #47a3da;
+$borderStyle: solid 1px #ddd;
+$fontFamily: 'Lato', Calibri, Arial, sans-serif;
+
+
+body {
+  width:88%;
+  margin: 6%;
+  color: $mainColor;
+  font:{
+    family: $fontFamily;
+    size: 2em;
+  }
+}
+
+// styling for the icon divs in their various positions
+
+.iconDiv {
+  width: $threeWidth;
+  display: inline-block;
+  float:left;
+  text-align: center;
+  padding: 2em 0 2em 0;
+}
+
+.topLeft {
+  border:{
+    bottom: $borderStyle;
+  }
+}
+
+.topMid {
+  border:{
+    left: $borderStyle;
+    bottom: $borderStyle;
+    right: $borderStyle;
+  }
+}
+
+.topRight {
+  border:{
+    bottom: $borderStyle;
+  }
+}
+
+.bottomMid {
+  border:{
+    right: $borderStyle;
+    left: $borderStyle;
+  }
+}
+
+// Styling for the icondivs upon hover
+
+.iconDiv:hover {
+  background-color: $mainColor;
+  color: white;
+}
+
+.iconDiv:hover .line {
+  border-color: white;
+}
+
+// Styling for the icons themselves
+
+i {
+  margin-bottom: .2em;
+}
+
+.line {
+  border-top: solid 6px $mainColor;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: .8em;
+}
+
+.english {
+  font:{
+    size: 1.2em;
+    weight: 500;
+  }
+}
+
+.deutsch {
+   text-transform: uppercase;
+   font-size: .6em;
+   display: none;
+}
+
+/*Media queries*/
+
+@media screen and (max-width:1004px) and (min-width: 666px) {
+  .iconDiv {
+    width: $twoWidth;
+  }
+
+  .topMid {
+    border:{
+      left: $borderStyle;
+      bottom: $borderStyle;
+      right: none;
+    }
+  }
+
+  .topRight {
+    border:{
+      top: none;
+      right: $borderStyle;
+      left: none;
+    }
+  }
+  .bottomLeft {
+    border:{
+      top: none;
+      right: none;
+      bottom: $borderStyle;
+    }
+  }
+  .bottomMid {
+    border:{
+      top: none;
+      right: $borderStyle;
+      left: none;
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .iconDiv {
+    width: $oneWidth;
+  }
+  .topLeft {
+    border:{
+      bottom: $borderStyle;
+      right: none;
+      left: none;
+    }
+  }
+
+  .topRight {
+    border:{
+      bottom: $borderStyle;
+      top: none;
+      right: none;
+      left: none;
+    }
+  }
+
+  .topMid {
+    border:{
+      bottom: $borderStyle;
+      top: none;
+      right: none;
+      left: none;
+    }
+  }
+
+  .bottomMid {
+    border:{
+      bottom: $borderStyle;
+      top: none;
+      right: none;
+      left: none;
+    }
+  }
+
+  .bottomLeft {
+    border:{
+      bottom: $borderStyle;
+      top: none;
+      right: none;
+      left: none;
+    }
+  }
+
+  .bottomRight {
+    border:{
+      top: none;
+      right: none;
+      left: none;
+    }
+  }
+
+}
