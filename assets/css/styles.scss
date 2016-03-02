@@ -4,6 +4,7 @@ $oneWidth: 100%;
 $mainColor: #47a3da;
 $borderStyle: solid 1px #ddd;
 $fontFamily: 'Lato', Calibri, Arial, sans-serif;
+$transitionTime: .7s;
 
 
 body {
@@ -24,6 +25,7 @@ body {
   float:left;
   text-align: center;
   padding: 2em 0 2em 0;
+  // transition: -webkit-transform .5s;
 }
 
 .topLeft {
@@ -68,6 +70,7 @@ body {
 
 i {
   margin-bottom: .2em;
+  transition: -webkit-transform $transitionTime;
 }
 
 .line {
@@ -75,6 +78,7 @@ i {
   width: 50%;
   margin-left: 25%;
   margin-bottom: .8em;
+  transition: -webkit-transform $transitionTime;
 }
 
 .english {
@@ -82,13 +86,35 @@ i {
     size: 1.2em;
     weight: 500;
   }
+  transition: -webkit-transform $transitionTime;
 }
 
 .deutsch {
    text-transform: uppercase;
    font-size: .6em;
-   display: none;
+   opacity: 0;
+   transition: -webkit-transform $transitionTime, opacity $transitionTime;
 }
+
+//These are the classes that will be added to certain elements via javascript
+
+#iconHover {
+  -webkit-transform: translateY(10px);
+}
+
+.lineHover {
+  -webkit-transform: translateY(50px);
+}
+
+.englishHover {
+  -webkit-transform: translateY(-40px);
+}
+
+.deutschHover {
+  -webkit-transform: translateY(-10px);
+  opacity: 1;
+}
+
 
 /*Media queries*/
 
